@@ -1,0 +1,15 @@
+
+<!doctype html>
+<title>Path: {{ tree.name }}</title>
+<h1>{{ tree.name }}</h1>
+<ul>
+
+{%- for item in tree.children recursive %}
+    <li>{{ item.name }}
+    {%- if item.children -%}
+	{%- for items in item.children %}
+		<a><ul>{{items.name}}{{download()}}</ul></a>
+	{%- endfor %}
+    {%- endif %}</li>
+{%- endfor %}
+</ul>

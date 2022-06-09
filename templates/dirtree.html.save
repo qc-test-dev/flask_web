@@ -1,0 +1,20 @@
+
+<!doctype html>
+<title>Path: {{ tree.name }}</title>
+<h1>{{ tree.name }}</h1>
+<ul>
+{%- for item in tree.children recursive %}
+    <li>{{ item.name }}
+    {%- if item.children -%}
+       <ul>{{ loop(item.children) }}</ul>
+	<a href="{{item}}" download>{{ loop(item.children) }}</a>
+      
+ 	
+	{%- for item in item.children recursive %}
+		<ul>
+	  <a href="/home/usr_admin/flask_app/web_repo_auto/tester05_30_2022_17:15:45/ls /home/usr_admin/flask_app/web_repo_auto/tester05_30_2022_17:15:45{{item.name}}" download>{{item.name}}</a>	
+	</ul>
+	{%- endfor %}
+    {%- endif %}</li>
+{%- endfor %}
+</ul>
