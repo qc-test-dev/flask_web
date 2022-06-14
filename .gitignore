@@ -1,10 +1,6 @@
-app.py.save
-app.py.save.1
-app.py.save.2
+*.save
+__pycache__
+static
 bk
 flaskenv
-nano
-web_repo_auto
-zte_repo
-zte_repo1
-__pycache__
+
