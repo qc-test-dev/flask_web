@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QC-SITE</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel=”icon” type="image/vnd.microsoft.icon" href=”favicon.ico” sizes="20x20" />
+    <style>
+    body {
+        font-family: "IBM Plex Sans", sans-serif;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .hdr h1 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      .hdr {
+        background: black;
+        height: 7vh;
+        border-radius: 15%;
+        text-align: center;
+        width: 90%;
+      }
+      .inicio{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+      .container {
+        display: flex;
+        width: 60vw;
+        height: auto;
+        box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.11);
+        border-radius: 15%;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+      }
+      .nav-bar {
+        display: grid;
+        grid-gap:2vw;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 6vw;
+        height: 11vh;
+
+      }
+      .boton{
+        outline: none;
+
+        background-color: whitesmoke;
+        color: black;
+        padding: 14px;
+        width: 10vw;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        padding: 2vh;
+        margin: 1px 8px;
+        border-radius: 22%;
+        box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.24);
+       font-size: 13px;
+       font-weight: 300;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .btn{
+      justify-content: center;
+      display: flex;
+      margin-top: 3vh;
+    }
+
+
+
+    .links  a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 13px;
+    }
+
+    .links{
+        background-color: blanchedalmond;
+        width: 8vw;
+        display: none;
+        background-color: whitesmoke;
+        color: black;
+
+
+
+        position: relative;
+        overflow: hidden;
+        padding: 1vh;
+        margin: 10px 15px;
+        border-radius: 22%;
+        box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.24);
+       font-size: 12px;
+       font-weight: 300;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 0px solid transparent;
+      border-radius: 0.5rem;
+    }
+
+    .links a:hover{
+        background-color: burlywood;
+    }
+    .desplegable:hover .links{
+        display:block;
+    }
+
+    .desplegable{
+      width: 10vw;
+    }
+    .footer{
+        margin-top: 6vmax;
+    }
+
+    .notes-area {
+
+        padding: 1px;
+        width: 30vw;
+        height: auto;
+        text-decoration: none;
+      font-family: "Font Awesome\ 5 Free", Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      color: #585858;
+      box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
+      border: 0px solid transparent;
+      border-radius: 0.5rem;
+    }
+    .notes-area a{
+      font-size: 15px;
+      padding: 0.5px;
+      text-decoration: underline;
+      font-family: "Font Awesome\ 5 Free", Arial, Helvetica, sans-serif;
+      font-weight: 450;
+      color: #585858;
+
+    }
+    .notes-area h3{
+      text-align: center;
+
+      text-decoration: none;
+      font-size: 18px;
+      font-family: "Font Awesome\ 5 Free", Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      color: #585858;
+
+    }
+
+
+
+
+
+
+    .consulta_serial{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .boton-serial{
+      background-color: whitesmoke;
+      color: black;
+      padding: 16px;
+      width: 11vw;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      padding: 3vh;
+      margin: 0 10px;
+      border-radius: 22%;
+      box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.24);
+     font-size: 14px;
+     font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .links-serial  a{
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 13px;
+    }
+
+    .links-serial{
+      background-color: whitesmoke;
+      width: 15vw;
+      display: none;
+
+    }
+
+    .links-serial a:hover{
+      background-color: gray;
+    }
+    .desplegable-serial:hover .links-serial{
+      display: grid;
+    grid-template-columns: repeat(3,1fr);
+    }
+
+    .desplegable-serial{
+    width: 10vw;
+    }</style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <header class="hdr">
+                <h1> INICIO </h1>
+
+
+            </header>
+
+            <nav-bar  class="nav-bar">
+                <div>
+                    <div class="desplegable">
+                        <button class="boton"><span>Manuales</span> </button>
+                        <div class="links">
+                            
+                            <a href="https://www.wireshark.org/#download" target="_blank">Descarga Wireshark </a>
+                            <a href="https://www.charlesproxy.com/download/" target="_blank">Descarga Charles Proxy</a>
+                            <a href="https://drive.google.com/file/d/1mVhquQIMNBtu3dmaE0nvVHNHcUTzLjvg/view" target="_blank">Manual Trazas/ perfil 1</a>
+
+                            <a href="https://drive.google.com/file/d/1cyz8oBddNq252gfiOuifdhBgaam3r4Hp/view" target="_blank">Manual ADB</a>
+                            <a href="https://drive.google.com/file/d/1ocoz_iAG0fBL30wjZIzGyor7RijV-zyw/view" target="_blank">Manual configurar VPN</a>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="desplegable">
+                        <button class="boton">ZTE_REPO</button>
+                        <div class="links">
+                        <a href="/zte_repo" target="_blank" >versiones ZTE</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="desplegable">
+                        <button class="boton" >auto_reportes</button>
+                        <div class="links">
+                            <a href="/auto_reportes" target="_blank" > reportes web automation</a>
+                            <a href="" ><span>Jenkins</span></a>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </nav-bar>
+
+                <div class="notes-area" >
+                    <h3>  Anuncios  </h3>
+
+                    <br>
+
+                    <a href="" target="_blank">* under construction *</a><br>
+                    <br>
+                    <a href="" target="_blank">*  </a><br>
+                    <br>
+                      <a href="" target="_blank"> * </a><br>
+                      <br>
+
+                        <a href=" " target="_blank"> * </a><br>
+                        <br>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            <footer class="footer">
+                <p> QC SITE 2022 </p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

@@ -8,8 +8,9 @@ import glob,os
 app=Flask(__name__)
 
 @app.route("/")
+@app.route("/index")
 def index():
-	return render_template('index.html',titulo="INICIO")
+	return render_template('home.html',titulo="INICIO")
 
 def make_tree(path):
 	tree = dict(name=os.path.basename(path), children=[])
@@ -26,9 +27,14 @@ def make_tree(path):
 	return tree
 
 @app.route('/zte_repo')
-def reportes():
-	path=("/home/usr_admin/flask_app/static")
+def zte_repo():
+	path=("/home/usr_admin/flask_app/static/zte_repo")
 	return render_template('dirtree.html', tree=make_tree(path))
+
+@app.route('/auto_reportes')
+def auto_reportes():
+        path=("/home/usr_admin/flask_app/static/auto_reportes")
+        return render_template('reportes_dirtree.html', tree=make_tree(path))
 
 if __name__=="__main__":
 	app.run(host="0.0.0.0",debug=True)

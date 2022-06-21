@@ -1,7 +1,6 @@
 <!doctype html>
 <title>Path: {{ tree.name }}</title>
-<h1>ZTE_FW+apks_REPOSITORY</h1>
-<h2>14-jun-22 Last up to date</h2>
+<h1>reportes web</h1>
 <ul>
 
 {%- for item in tree.children recursive %}
@@ -18,7 +17,7 @@
 
 		{%- for childItem in items.children %}
 			
-			<ul><li> <a href="/static/{{ tree.name }}/{{item.name}}/{{items.name}}/{{childItem.name}}" download> {{childItem.name}} </a></li> </ul>
+			<ul><li> <a href="/static/{{ tree.name }}/{{item.name}}/{{items.name}}/{{childItem.name}}" target="_blank"> {{childItem.name}} </a></li> </ul>
 		
 
 
@@ -28,7 +27,7 @@
 
 
 	{%- if not items.children -%}
-	    <ul> <a href="/static/{{ tree.name }}/{{item.name}}/{{items.name}}" download> {{items.name}} </a> </ul>
+	    <ul> <a href="/static/{{ tree.name }}/{{item.name}}/{{items.name}}" target="_blank"> {{items.name}} </a> </ul>
 	  {%- endif %}
 
 
